@@ -1,6 +1,6 @@
 # Piano Inharmonicity & Balanced Tuning Curve
 
-Measure piano notes one by one, estimate their inharmonicity, then generate a balanced-like piano tuning curve and publication-ready deviation plots.
+Measure piano notes one by one, estimate their inharmonicity, then generate a balanced-like piano tuning curve.
 
 ## What this tool does
 
