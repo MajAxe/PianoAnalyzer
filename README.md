@@ -1,10 +1,6 @@
 # Piano Inharmonicity & Balanced Tuning Curve
 
-Measure piano notes one by one, estimate their inharmonicity, then generate a **balanced-like piano tuning curve** and publication-ready deviation plots.
-
-This project is designed for piano acoustics experiments, piano tuning exploration, and visual analysis of how inharmonicity affects octave stretching.
-
----
+Measure piano notes one by one, estimate their inharmonicity, then generate a balanced-like piano tuning curve and publication-ready deviation plots.
 
 ## What this tool does
 
@@ -18,17 +14,6 @@ This script can:
 - optimize a **balanced-like** compromise between octaves, twelfths, fifths, fourths, double octaves, and nineteenth intervals;
 - generate CSV files, scientific plots, and a Markdown analysis report.
 
-The default workflow is:
-
-```text
-record notes → detect partials → estimate B → smooth B curve
-           → optimize tuning curve → export plots + CSV + report
-```
-
-> This is an experimental analysis and tuning-aid tool. It is not a replacement for a professional piano tuner or a certified acoustic measurement system.
-
----
-
 ## Example with mine
 
 <img width="1965" height="1100" alt="01_inharmonicite_B" src="https://github.com/user-attachments/assets/b2730c2a-871a-45f4-a795-2fc580b2b3e6" />
@@ -39,16 +24,11 @@ record notes → detect partials → estimate B → smooth B curve
 
 <img width="2060" height="1220" alt="03_deviation_douzieme_cents" src="https://github.com/user-attachments/assets/2543ca72-f949-452e-b56f-92e04b0bd50a" />
 
----
-
 ## Why piano tuning needs this
 
-A real piano string is not perfectly harmonic. Because of string stiffness, the partials are slightly sharper than exact integer multiples of the fundamental. This is called **inharmonicity**.
+A real piano string is not perfectly harmonic. Because of string stiffness, the partials are slightly sharper than exact integer multiples of the fundamental. This is called *inharmonicity*.
 
 That means a mathematically equal-tempered tuning is not enough: if every first partial is placed exactly on equal temperament, upper partials will not align cleanly, especially in octaves and larger intervals. Piano tuners therefore stretch the tuning, usually lowering the bass and raising the treble compared with equal temperament.
-
-This project makes that phenomenon visible and measurable.
-
 
 ## Quick start
 
@@ -98,8 +78,6 @@ python main.py --mode from-csv \
 
 A good first pass is to record every 3 to 6 semitones, then fill in missing or unstable zones.
 
----
-
 ## Command-line options
 
 | Option | Default | Description |
@@ -136,8 +114,6 @@ The default output directory is `analyse_piano/`.
 | `analysis_report.md` | Auto-generated explanation and summary tables |
 
 The CSV files always contain both cents and Hz deviation data. The option `--deviation-unit` only changes the generated deviation plots.
-
----
 
 ## Mathematical model
 
@@ -277,7 +253,5 @@ More details on the formulas used:
 
 The implementation here is not an official implementation of the paper. It uses a practical note-by-note workflow and a customizable interval-weighted optimization style.
 
----
-
 ## License
-MIT for a permissive open-source project;
+MIT
